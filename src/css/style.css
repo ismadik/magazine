@@ -1,0 +1,893 @@
+@import '../fonts/museo/style.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100;1,300&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  transition: 0.3s;
+  font-family: "Museo Sans Rounded 300", sans-serif;
+}
+
+.container {
+  max-width: 1185px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.btn {
+  font-family: "Museo Sans Rounded 700", sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  color: #FFFFFF;
+  padding: 17px 31px;
+  border-radius: 43px;
+  border: none;
+  cursor: pointer;
+}
+.btn_green {
+  background: linear-gradient(360deg, #077A34 0%, #19E270 100%);
+  box-shadow: 0 9px 48px rgba(24, 220, 109, 0.15);
+  border: 1px solid #18DE6E;
+  transition: all 0.6s;
+}
+.btn_green:hover {
+  /* background: #FFFFFF; */
+  color: white;
+  /* transition: all 1s; */
+
+}
+.btn_red {
+  background: linear-gradient(360deg, #A8180F 0%, #DD463D 100%);
+  box-shadow: 0 9px 48px rgba(211, 61, 52, 0.24);
+  transition: all 1s;
+  border: 1px solid #E31E24;
+}
+.btn_red:hover {
+  background: #FFFFFF;
+  color: white;
+  border: #18DE6E;
+  /* transition: 0.5s; */
+  /* transition: all; */
+}
+.btn_test {
+  padding: 17px 92px;
+}
+
+.header__top {
+  background: #172027;
+  padding: 30px 0;
+}
+.header__top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__top-right {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 28px;
+  column-gap: 28px;
+}
+.header__top-social {
+  display: flex;
+  -moz-column-gap: 15px;
+  column-gap: 15px;
+  align-items: center;
+}
+.header__top-icon {
+  transition: 0.3s;
+}
+.header__top-icon svg path:hover {
+  transition: 0.3s;
+  fill: #18dc6d;
+}
+.header__top-call {
+  display: flex;
+  -moz-column-gap: 12px;
+  column-gap: 12px;
+  align-items: center;
+}
+.header__number {
+  font-family: "Museo Sans Rounded 700", sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffffff;
+}
+.header__bot {
+  background: #f2f2f3;
+  padding: 15px 0;
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__link {
+  font-family: "Museo Sans Rounded 300", sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  color: #0f0f10;
+  transition: 0.5s;
+}
+.header__link:hover {
+  font-family: "Museo Sans Rounded 700", sans-serif;
+  color: #e31e24;
+  transition: 0.5s;
+}
+.header__burger {
+  width: 40px;
+  height: 30px;
+  position: relative;
+  cursor: pointer;
+  display: none;
+}
+.header__burger span {
+  position: absolute;
+  display: block;
+  height: 4px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border-radius: 3px;
+}
+.header__burger span:first-child {
+  top: 0;
+}
+.header__burger span:nth-child(2) {
+  top: 13px;
+}
+.header__burger span:last-child {
+  bottom: 0;
+}
+.header__burger--active span:first-child {
+  top: 13px;
+  transform: rotate(45deg);
+}
+.header__burger--active span:nth-child(2) {
+  top: 13px;
+  width: 0;
+}
+.header__burger--active span:last-child {
+  top: 13px;
+  transform: rotate(-45deg);
+}
+@media (max-width: 680px) {
+  .header__top-social, .header__number {
+    display: none;
+  }
+  .header__burger {
+    display: inline;
+  }
+  .header__top {
+    padding: 15px 0;
+  }
+  .header__top .btn {
+    padding: 12px 18px;
+  }
+  .header__title {
+    width: 60px;
+  }
+  .header__bot {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .header__bot--active {
+    padding: 15px 0;
+    height: 100%;
+    max-height: 220px;
+  }
+  .header__nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+select.btn {
+  display: inline-block;
+  padding: 10px 13px;
+  border-radius: 9px;
+  background: #18dc6d;
+  font-size: 15px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #11964a;
+}
+
+.begin {
+  padding: 180px 0 81px;
+  background: url("../images/bg.png") center/cover no-repeat;
+  position: relative;
+}
+.begin::before {
+  content: "";
+  background: linear-gradient(81.5deg, rgba(0, 0, 0, 0.584) 40.95%, rgba(0, 0, 0, 0) 99.79%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.begin__row {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 88px;
+  column-gap: 88px;
+  position: relative;
+  z-index: 2;
+}
+.begin__contant {
+  width: 50%;
+}
+.begin__img {
+  width: 100%;
+}
+.begin__title {
+  font-family: "Museo Sans Rounded 700", sans-serif;
+  font-size: 44px;
+  line-height: 96.5%;
+  color: #fff;
+}
+.begin__desc {
+  font-family: "Museo Sans Rounded 300", sans-serif;
+  font-size: 22px;
+  line-height: 24px;
+  color: #ffffff;
+  margin: 20px 0 26px;
+}
+.begin__btns {
+  display: flex;
+  -moz-column-gap: 46px;
+  column-gap: 46px;
+}
+.begin__bottom {
+  display: flex;
+  -moz-column-gap: 120px;
+  column-gap: 120px;
+  position: relative;
+  z-index: 2;
+}
+.begin__bottom-info {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
+}
+.begin__bottom-text {
+  font-family: "Museo Sans Rounded 300", sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffffff;
+}
+
+@media (max-width: 1200px) {
+  .begin {
+    padding: 170px 0 70px;
+  }
+  .begin__btns {
+    margin-bottom: 140px;
+  }
+}
+@media (max-width: 1024px) {
+  .begin__img {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  .begin {
+    padding: 160px 0 60px;
+  }
+  .begin__btns {
+    margin-bottom: 120px;
+  }
+  .begin__title {
+    font-size: 40px;
+  }
+  .begin__desc {
+    font-size: 20px;
+  }
+  .begin__bottom {
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+  }
+}
+@media (max-width: 786px) {
+  .begin__title {
+    font-size: 30px;
+  }
+  .begin__bottom {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+.cards {
+  padding: 100px 0;
+  background: #eeeeee;
+  box-shadow: 0 9px 49px rgba(142, 136, 136, 0.16);
+}
+.cards__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 53px;
+}
+.cards__title {
+  margin-bottom: 68px;
+  font-family: "Museo Sans Rounded 700", sans-serif;
+  font-size: 35px;
+  line-height: 96.5%;
+  color: #0f0f10;
+}
+.cards__item {
+  min-width: 320px;
+  width: 33.33333%;
+  display: flex;
+  -moz-column-gap: 24px;
+  column-gap: 24px;
+}
+.cards__item-info {
+  display: flex;
+}
+.cards__item-title {
+  margin-bottom: 9px;
+  font-family: "Museo Sans Rounded 700", sans-serif;
+  font-size: 18px;
+  line-height: 111%;
+  color: #0f0f10;
+}
+.cards__item-desc {
+  font-family: "Museo Sans Rounded 300", sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  color: #0f0f10;
+}
+
+.map {
+  padding: 96px 0;
+}
+.map__title {
+  font-family: "Museo Sans Rounded 700", sans-serif;
+  font-size: 32x;
+  line-height: 96.5%;
+  color: #0F0F10;
+  margin-bottom: 70px;
+}
+
+.products {
+  padding-bottom: 90px;
+}
+.products__title {
+  font-family: "Museo Sans Rounded 700", sans-serif;
+  font-size: 32x;
+  line-height: 96.5%;
+  color: #0f0f10;
+  margin-bottom: 70px;
+}
+.products__card {
+  padding-top: 20px;
+  width: 100%;
+  height: 450px;
+  position: relative;
+  /* box-shadow: 0px 0px 50px 0px rgba(34, 60, 80, 0.2); */
+  transition: .5s;
+}
+.products__card-moreCard{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* background: rgba(224, 223, 223, 0.7); */
+  backdrop-filter: blur(3px);
+  background: rgba(224, 223, 223, 0.7);
+  transition: .5s;
+  height: 450px;
+  width: 355px;
+  padding-top: 180px;
+  padding-left: 10px;
+}
+.products__card:hover .products__card-moreCard{
+  display: block;
+}
+.products__card-more_suptitle{
+  font-weight: 700;
+}
+
+.products__card-img {
+  width: 100%;
+}
+.products__card-title {
+  text-align: center;
+  font-family: "Museo Sans Rounded 700", sans-serif;
+  font-size: 26px;
+  line-height: 96.5%;
+  color: #0f0f10;
+  margin: 40px 0 12px;
+}
+.products__card-desc {
+  font-family: "Museo Sans Rounded 300", sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  color: #0f0f10;
+}
+.info {
+  padding: 100px 0;
+}
+.info__title {
+  font-family: "Museo Sans Rounded 700", sans-serif;
+  font-size: 35x;
+  line-height: 96.5%;
+  color: #0F0F10;
+  margin-bottom: 70px;
+}
+.info__row {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 77px;
+       column-gap: 77px;
+  margin-bottom: 100px;
+}
+.info__card {
+  width: calc(50% - 38.5px);
+}
+.info__card-img {
+  width: 100%;
+}
+.info__card-title {
+  font-family: "Museo Sans Rounded 700", sans-serif;
+  font-size: 25x;
+  line-height: 96.5%;
+  color: #0F0F10;
+}
+.info__card-desc {
+  margin: 16px 0;
+  font-family: "Museo Sans Rounded 300", sans-serif;
+  font-size: 15x;
+  line-height: 18px;
+  color: #0F0F10;
+}
+
+.question {
+  padding: 100px 0;
+}
+.question__title {
+  font-family: "Museo Sans Rounded 700", sans-serif;
+  font-size: 35x;
+  line-height: 96.5%;
+  color: #0F0F10;
+  margin-bottom: 72px;
+}
+.question__accordion {
+  padding: 28px 164px 22px 40px;
+  background: #FFFFFF;
+  box-shadow: 0 5px 48px rgba(49, 47, 47, 0.1);
+  border-radius: 10px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.question__accordion_active .question__accordion-desc {
+  display: block;
+}
+.question__accordion_active .question__accordion-title {
+  color: #18DC6D;
+}
+.question__accordion_active .question__accordion-action {
+  transform: rotate(180deg);
+}
+.question__accordion-title {
+  font-family: "Museo Sans Rounded 700", sans-serif;
+  font-size: 20px;
+  line-height: 96.5%;
+  color: #0F0F10;
+}
+.question__accordion-desc {
+  margin-top: 13px;
+  font-family: "Museo Sans Rounded 300", sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  color: #0F0F10;
+  display: none;
+}
+.question__accordion-action {
+  position: absolute;
+  top: 14px;
+  right: 33px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #18DC6D;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.footer {
+  background: #797C7D;
+  padding: 97px 0 100px;
+  height: 330px;
+}
+.footer__top-row {
+  margin-top: 76px;
+}
+.footer__link {
+  color: #FFFFFF;
+}
+
+.overlay {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5019607843);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 10;
+  padding: 0 50px;
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+}
+.popup__close {
+  position: absolute;
+  top: 7px;
+  right: 17px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.popup__call {
+  max-width: 952px;
+  width: 100%;
+  display: flex;
+}
+.popup__form {
+  padding: 80px;
+}
+.popup__form-title {
+  font-family: "Museo Sans Rounded 700", sans-serif;
+  font-size: 25px;
+  line-height: 96.5%;
+  color: #0f0f10;
+  white-space: nowrap;
+}
+.popup__form-title--one {
+  white-space: unset;
+  text-align: start;
+}
+.popup__form-subtitle {
+  margin: 4px 0 40px;
+  font-family: "Museo Sans Rounded 300", sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  color: #0f0f10;
+  text-align: center;
+}
+.popup__form-input {
+  background: #ffffff;
+  box-shadow: 0 5px 48px rgba(49, 47, 47, 0.1);
+  border-radius: 43px;
+  border: none;
+  width: 100%;
+  height: 52px;
+  padding-left: 32px;
+  margin-bottom: 15px;
+}
+.popup__form-input::-moz-placeholder {
+  font-family: "Museo Sans Rounded 300", sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  color: #c6c5c5;
+}
+.popup__form-input::placeholder {
+  font-family: "Museo Sans Rounded 300", sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  color: #c6c5c5;
+}
+.popup__form-label {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 7px;
+  column-gap: 7px;
+  margin-bottom: 15px;
+}
+.popup__form-label-text {
+  font-family: "Museo Sans Rounded 300", sans-serif;
+  font-size: 13px;
+  line-height: 15px;
+  color: #0f0f10;
+}
+.popup__form-date {
+  width: 50%;
+  margin-bottom: 15px;
+  border-radius: 43px;
+  padding: 0 15px;
+  background: #ffffff;
+  box-shadow: 0 5px 48px rgba(49, 47, 47, 0.1);
+  border-radius: 43px;
+  border: none;
+}
+.popup__test {
+  width: 896px;
+}
+.popup__test .popup__form-label {
+  flex-direction: column;
+}
+.popup__rent {
+  width: 896px;
+}
+
+.autos {
+  padding: 100px 0;
+}
+.autos__title {
+  font-family: "Museo Sans Rounded 700", sans-serif;
+  font-size: 35px;
+  line-height: 96.5%;
+  color: #0f0f10;
+  margin-bottom: 70px;
+}
+.autos__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.autos__card {
+  min-width: 250px;
+  width: calc(33.33333% - 13.33333px);
+  background-color: white;
+  box-shadow: 0px 9px 49px rgba(142, 136, 136, 0.16);
+  border-radius: 10px;
+}
+.autos__card-info {
+  padding: 37px;
+}
+.autos__card-title {
+  font-family: "Museo Sans Rounded 700", sans-serif;
+  font-size: 25px;
+  line-height: 96.5%;
+  color: #0f0f10;
+}
+.autos__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  margin-top: 26px;
+  margin-bottom: 32px;
+}
+.autos__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.autos__item-left {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 15px;
+  column-gap: 15px;
+  width: 60%;
+}
+.autos__item-info {
+  font-family: "Museo Sans Rounded 700", sans-serif;
+  font-size: 18px;
+  line-height: 111%;
+  color: #0f0f10;
+}
+.autos__item-right {
+  width: 40%;
+}
+.autos .btn__autos {
+  margin: 0 auto;
+  display: block;
+  margin-top: 60px;
+}/*# sourceMappingURL=style.css.map */
+
+.dropbtn {
+  background-color: #18DC6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border-radius:  15px;
+  border: #077A34;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #18DC6D;}
+.header__logo{
+  max-width: 140px;
+  max-height: 120px;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+.wash{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+.img_mashine{
+  max-width: 50%;
+}
+.washmashine{
+  font-size: 24px;
+
+}
+.text_wash{
+  list-style-type: circle;
+  font-size: 14px;
+}
+.loko{
+  width: 299px;
+}
+.text_product{
+  width: 300px;
+}
+.speck{
+  display: flex;
+  justify-content: center;
+   margin: 0 auto ;
+}
+.tespeck{
+  margin-top: 50px ;
+  text-align: center;
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+}
+.secondspeck{
+  font-size: 17px;
+  text-align:left;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Roboto', sans-serif;
+  padding-top: 20px;
+
+
+}
+p{
+  padding-top: 5px;
+}
+.divspeck1{
+  font-size: 14px;
+  font-weight: normal;
+  font-family: 'Roboto', sans-serif;
+  padding-top: 20px;
+  width: 300px;
+  
+}
+.divspeck{
+  font-size: 14px;
+  font-weight: normal;
+  font-family: 'Roboto', sans-serif;
+  padding-top: 20px;
+  width: 165px;
+}
+/* .divspeck2 span{
+  display: block;
+  height: 2px;
+  border-bottom: 1px dashed black;
+} */
+.speckflex{
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid black;
+  margin-top: 50px;
+}
+.secondspeck{
+  width: 280px;
+}
+.container3{
+  width: 900px;
+}
+.oop{
+  margin-top: 100px;
+}
+.oop1{
+  margin-top: 33px;
+}
+.oop2{
+  margin-top: 15px;
+}
+.oop3{
+  margin-top: 45px;
+}
+.oop4{
+  margin-top: 50px;
+}
+.oop5{
+  margin-top: 145px;
+}
+.oop6{
+  margin-top: 15px;
+}
+.oop7{
+  margin-top: 95px;
+}
+.oop8{
+  margin-top: 80px;
+}
+.oop9{
+  margin-top:20px
+}
+.speckflex1{
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.oop_kg{
+  margin-top: 80px;
+}
+.autos__card-img{
+  margin-top: 50px;
+  margin-left: 50px;
+  height: 300px;
+}
+.mashine1{
+  height: 500px;
+}
+.p:before {
+  content: '................................................................................';
+  z-index: 1;
+  display: block;
+  position: absolute;
+  top: 9px;
+  left: 0;
+  color: black;
+  font-size: 17px;
+  line-height: 0;
+  font-family: Arial,Helvetica,sans-serif;
+}
+/* p{
+  overflow: hidden;
+  position: relative;
+  float: left;
+  width: 33.33333%;
+  padding-left: 0;
+  padding-right: 0;
+  background: #fff;
+  margin: 0;
+} */

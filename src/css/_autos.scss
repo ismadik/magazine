@@ -1,0 +1,57 @@
+.autos {
+  padding: 100px 0;
+  &__title {
+    @include font($museo700, 35px, 96.5%, #0f0f10);
+    margin-bottom: 70px;
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  &__card {
+    min-width: 250px;
+    width: calc(33.33333% - 13.33333px);
+    background-color: white;
+    box-shadow: 0px 9px 49px rgba(142, 136, 136, 0.16);
+    border-radius: 10px;
+    &-info {
+      padding: 37px;
+    }
+    &-title {
+      @include font($museo700, 25px, 96.5%, #0f0f10);
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    margin-top: 26px;
+    margin-bottom: 32px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-left {
+      display: flex;
+      align-items: center;
+      -moz-column-gap: 15px;
+      column-gap: 15px;
+      width: 60%;
+    }
+    &-info {
+      @include font($museo700, 18px, 111%, #0f0f10);
+    }
+    &-right {
+      width: 40%;
+    }
+  }
+
+  .btn__autos {
+    margin: 0 auto;
+    display: block;
+    margin-top: 60px;
+  }
+}

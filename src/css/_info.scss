@@ -1,0 +1,27 @@
+.info{
+  padding: 100px 0;
+  &__title{
+    @include text($museo700, 35x, 96.5%,#0F0F10);
+    margin-bottom: 70px;
+  }
+  &__row{
+    display: flex;
+    align-items: center;
+    column-gap: 77px;
+    margin-bottom: 100px;
+  }
+  &__card{
+    width: calc(50% - 38.5px);
+    &-img{
+      width: 100%;
+    }
+    &-title{
+      @include text($museo700, 25x, 96.5%,#0F0F10);
+    }
+    &-desc{
+      margin: 16px 0 ;
+      @include text($museo300, 15x, 18px,#0F0F10);
+    }
+
+  }
+}

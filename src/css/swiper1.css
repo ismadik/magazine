@@ -1,0 +1,31 @@
+.swiper {
+    width: 600px;
+    height: 100%;
+    padding: 0 9px;
+    margin-right: 150px;
+  }
+  
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+  .swiper-button-next {
+    margin-right: 10px;
+    right: -2px;
+  }
+  
+  /* .swiper-button-prev {
+    left: -2px;
+  } */
+  .text_product{
+    max-width: 300px;
+  }
+  .swiper-pagination-bullet{
+    color: #18DC6D;
+  }
+.swiper-pagination-bullet swiper-pagination-bullet-active{
+  color: #18DC6D;
+
+}
